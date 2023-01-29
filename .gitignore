@@ -14,3 +14,5 @@ config.py
 profile_default/
 ipython_config.py
 
+# gitignore
+.gitignore
