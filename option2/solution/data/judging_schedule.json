@@ -1,0 +1,19 @@
+{
+    "schedule" : [
+        {
+        "judge": "Graham Hemingway",
+        "team": "Team VandyHacks",
+        "time": "2022-10-23T11:20:00.000Z"
+        },
+        {
+        "judge": "Douglas Schmidt",
+        "team": "Team ChangePlusPlus",
+        "time": "2022-10-23T12:00:00.000Z"
+        },
+        {
+        "judge": "Daniel Balasubramaniam",
+        "team": "Team CTF",
+        "time": "2022-10-23T10:40:00.000Z"
+        }
+    ]
+}

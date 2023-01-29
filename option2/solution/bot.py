@@ -3,10 +3,12 @@ import discord
 from responses import handle_response
 
 
-async def send_message(message, user_message, is_private):
+async def send_message(message, usermessage, is_private):
     try:
-        response = handle_response(user_message)
-        await message.author.send(response) if is_private else await message.channel.send(response)
+        response = handle_response(message, usermessage)
+        # prevent bot from responding to unrecognized messages
+        if response != 'What?':
+            await message.author.send(response) if is_private else await message.channel.send(response)
     except Exception as e:
         print(e)
 
