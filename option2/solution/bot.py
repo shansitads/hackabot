@@ -4,16 +4,21 @@ from responses import handle_response
 
 
 async def send_message(message, usermessage, is_private):
+    '''handles discord-side of sending messages (actual response is given by responses.handle_response())'''
+
     try:
         response = handle_response(message, usermessage)
         # prevent bot from responding to unrecognized messages
-        if response != 'What?':
+        if response is not None:
             await message.author.send(response) if is_private else await message.channel.send(response)
     except Exception as e:
         print(e)
 
 
+
 def run_discord_bot():
+    '''main function to run bot'''
+
     # api keys in config.py (not committed)
     TOKEN = config.token_id
 
@@ -22,7 +27,7 @@ def run_discord_bot():
     intents.message_content = True
     client = discord.Client(intents=intents)
 
-    # when bot is online
+    # bot is shown as 'online'
     @client.event
     async def on_ready():
         print(f'{client.user} is ready')
@@ -36,7 +41,6 @@ def run_discord_bot():
         
         username = str(message.author)
         user_message = str(message.content)
-        print(user_message)
         channel = str(message.channel)
 
         print(f'{username} said: {user_message} [{channel}]')
