@@ -17,8 +17,6 @@ The goal is to automate the process of answering hackers question in the VandyHa
 <img src='./images/feature2-image1.png' alt="feature2-image1" width="70%"> <br>
 <img src='./images/feature2-image2.png' alt="feature2-image2" width="70%"><br>
 
-***Sidenote***: Although I used Python for this project, I am also familiar with Javascript (React). I thought it would be fun to use machine learning sentence similarity on questions asked in the chat, and Python tends to be the better choice while integrating ML. 
-
 
 #### Future improvements possible:
 :green_book: Replacing the FAQ csv to an editable Google Sheets document <br>
