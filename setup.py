@@ -13,16 +13,16 @@ sentence_comparer = SentenceTransformer(model_name)
 
 
 # faq file setup
-with open('./option2/solution/data/hackathon_FAQ.csv', 'r') as faq_file:
+with open('./data/hackathon_FAQ.csv', 'r') as faq_file:
     faq_data = list(csv.reader(faq_file, delimiter=","))
 
 
 # juding schedule setup
 # judging_schedule.json data was taken from option1 coding challenges
-with open('./option2/solution/data/judging_schedule.json', 'r') as json_file:
+with open('./data/judging_schedule.json', 'r') as json_file:
     judging_schedule = json.load(json_file)
 
 
 # teams list file setup
-with open('./option2/solution/data/teams_list.csv', 'r') as teams_file:
+with open('./data/teams_list.csv', 'r') as teams_file:
     teams_list = list(csv.reader(teams_file, delimiter=","))[0]
